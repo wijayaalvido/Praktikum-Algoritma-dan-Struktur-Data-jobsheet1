@@ -27,14 +27,15 @@ public class PraktikumArray {
         Scanner sc = new Scanner(System.in);
 
         String[] namaMK = {
-                "Pancasila",
+                "Agama",
                 "Konsep Teknologi Informasi",
                 "Critical Thinking dan Problem Solving",
                 "Matematika Dasar",
                 "Bahasa Inggris",
                 "Dasar Pemrograman",
                 "Praktikum Dasar Pemrograman",
-                "Keselamatan dan Kesehatan Kerja"
+                "Bahasa Indonesia",
+                "Pengantar Akuntansi, Manajemen, dan Bisnis"
         };
 
         double[] nilaiAngka = new double[namaMK.length];
@@ -47,7 +48,6 @@ public class PraktikumArray {
         System.out.println("Program Menghitung IP Semester");
         System.out.println("=======================================");
 
-        // INPUT
         for (int i = 0; i < namaMK.length; i++) {
             System.out.print("Masukkan nilai Angka untuk MK " + namaMK[i] + ": ");
             nilaiAngka[i] = sc.nextDouble();
@@ -58,10 +58,8 @@ public class PraktikumArray {
             totalNilaiSetara += nilaiSetara[i];
         }
 
-        // Karena tanpa SKS → dibagi jumlah mata kuliah
         double ip = totalNilaiSetara / namaMK.length;
 
-        // OUTPUT
         System.out.println("\n=======================================");
         System.out.println("Hasil Konversi Nilai");
         System.out.println("=======================================");
